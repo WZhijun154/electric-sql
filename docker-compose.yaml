@@ -1,0 +1,13 @@
+version: "3.3"
+name: "electric_sql"
+
+services:
+  electric:
+    image: electricsql/electric
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      # Not suitable for production. Only use insecure mode in development or if you've otherwise secured the Electric API.
+      # See https://electric-sql.com/docs/guides/security
+      ELECTRIC_INSECURE: true
+    ports:
+      - "${PORT}:3000"
