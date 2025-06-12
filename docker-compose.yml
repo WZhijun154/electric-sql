@@ -4,6 +4,7 @@ name: "electric_sql_prod"
 services:
   electric:
     image: electricsql/electric
+    pull_policy: always
     environment:
       DATABASE_URL: ${DATABASE_URL}
       ELECTRIC_USAGE_REPORTING: false
