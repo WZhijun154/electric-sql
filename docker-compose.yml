@@ -10,6 +10,4 @@ services:
       ELECTRIC_USAGE_REPORTING: false
       ELECTRIC_SECRET: ${ELECTRIC_SECRET}
       ELECTRIC_INSECURE: false
-    ports:
-      - "${PORT}:3000"
     restart: unless-stopped
